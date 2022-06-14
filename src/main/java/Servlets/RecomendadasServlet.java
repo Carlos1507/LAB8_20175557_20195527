@@ -16,8 +16,6 @@ import javax.servlet.http.HttpServletResponse;
         urlPatterns = {"/listaRecomendadas"}
 )
 public class RecomendadasServlet extends HttpServlet {
-    public RecomendadasServlet() {
-    }
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
     }

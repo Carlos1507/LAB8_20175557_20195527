@@ -26,7 +26,7 @@
     <table class="table table-dark table-transparent table-hover">
       <thead>
       <th>ID</th>
-      <th>TOUR</th>
+      <th>CANCION</th>
       <th>BANDA</th>
       </thead>
       <%

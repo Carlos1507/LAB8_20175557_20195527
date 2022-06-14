@@ -20,14 +20,35 @@ public class CancionesDao {
         }
         ArrayList<Cancion> listaCanciones = new ArrayList<>();
 
-        String sql = "select c.idcancion, c.nombre_cancion, b.idbanda, b.nombre_banda, b.artista_lider from cancion c\n" +
-                "inner join banda b on c.banda = b.idbanda";
+        String sql = "select * from cancion";
         try (Connection connection = DriverManager.getConnection(url, user, pass);
              PreparedStatement preparedStatement = connection.prepareStatement(sql);) {
             try(ResultSet rs = preparedStatement.executeQuery();){
                 while (rs.next()) {
-                    Banda banda = new Banda(rs.getString(3), rs.getString(4), rs.getInt(5));
-                    Cancion cancion = new Cancion(rs.getInt(1), rs.getString(2), banda);
+                    Cancion cancion = new Cancion(rs.getInt(1), rs.getString(2), rs.getString(3));
+                    listaCanciones.add(cancion);
+                }
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+        return listaCanciones;
+    }
+    public static ArrayList<Cancion> obtenerListaCancionesBanda(String idBanda){
+        try {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+        ArrayList<Cancion> listaCanciones = new ArrayList<>();
+
+        String sql = "select * from cancion where banda = ?";
+        try (Connection connection = DriverManager.getConnection(url, user, pass);
+            PreparedStatement preparedStatement = connection.prepareStatement(sql);) {
+            preparedStatement.setString(1,idBanda);
+            try(ResultSet rs = preparedStatement.executeQuery();){
+                while (rs.next()) {
+                    Cancion cancion = new Cancion(rs.getInt(1), rs.getString(2), rs.getString(3));
                     listaCanciones.add(cancion);
                 }
             }

@@ -22,12 +22,10 @@ public class TourDao {
         try (Connection conn = DriverManager.getConnection(url, user, pass);
              Statement stmt = conn.createStatement();
              ResultSet rs = stmt.executeQuery("select * from tour where nombre_tour like '%world%'")) {
-
             while (rs.next()) {
                 int id = rs.getInt(1);
                 String nombre = rs.getString(2);
                 String banda = rs.getString(3);
-
                 listaTours.add(new Tour(id,nombre,banda));
             }
 

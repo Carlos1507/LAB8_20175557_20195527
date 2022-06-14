@@ -6,12 +6,11 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page import="Beans.Cancion" %>
-<%@ page import="Beans.Cancion" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <jsp:useBean type="java.util.ArrayList<Beans.Cancion>" scope="request" id="listaRecomendadas"/>
 <html>
 <jsp:include page="/static/head.jsp">
-    <jsp:param name="title" value="Lista de recomendadas"/>
+    <jsp:param name="title" value="recomendadas"/>
 </jsp:include>
 <body>
 <div class='container'>
@@ -49,7 +48,6 @@
             %>
         </table>
     </div>
-
 </div>
 <jsp:include page="/static/scripts.jsp"/>
 </body>
