@@ -12,8 +12,7 @@ public class CancionesDao {
     private static String pass = "root";
     private static String url = "jdbc:mysql://localhost:3306/lab6sw1?serverTimezone=America/Lima";
 
-
-    public ArrayList<Cancion> obtenerListaCanciones(){
+    public static ArrayList<Cancion> obtenerListaCanciones(){
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
         } catch (ClassNotFoundException e) {
