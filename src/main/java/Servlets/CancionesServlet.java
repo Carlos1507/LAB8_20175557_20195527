@@ -13,24 +13,22 @@ import java.util.ArrayList;
 public class CancionesServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String cambio = "no";
-        String action = request.getParameter("action")== null? "listar":request.getParameter("action");
-        ArrayList<Cancion> listaCanciones = CancionesDao.obtenerListaCanciones();
-        System.out.println(action);
-        switch (action){
-            case "listar":
-                request.setAttribute("listaCanciones", listaCanciones);
-                request.setAttribute("actualiza", cambio);
-                RequestDispatcher viewPrincipal =request.getRequestDispatcher("listaCanciones.jsp");
-                viewPrincipal.forward(request,response);
-                break;
-            case "actualizaVista":
-                cambio = "actualiza";
-                request.setAttribute("listaCanciones", listaCanciones);
-                request.setAttribute("actualiza", cambio);
-                RequestDispatcher viewActualizado = request.getRequestDispatcher("listaCanciones.jsp");
-                viewActualizado.forward(request, response);
-                break;
+        String parametro = request.getParameter("action")== null? "listar":request.getParameter("action");
+        RequestDispatcher view;
+        System.out.println(parametro);
+        CancionesDao cancionesDao = new CancionesDao();
+        if (parametro.equals("listar")){
+            ArrayList<Cancion> listaTotalCanciones = cancionesDao.obtenerListaCanciones();
+            request.setAttribute("cambio", "listarTodo");
+            request.setAttribute("listaCanciones", listaTotalCanciones);
+            view = request.getRequestDispatcher("listaCanciones.jsp");
+            view.forward(request, response);
+        }else{
+            ArrayList<Cancion> listaCancionesPorBanda = cancionesDao.obtenerListaCancionesBanda(parametro);
+            request.setAttribute("cambio", parametro);
+            request.setAttribute("listaCanciones", listaCancionesPorBanda);
+            view = request.getRequestDispatcher("listaCanciones.jsp");
+            view.forward(request, response);
         }
     }
 

@@ -12,7 +12,6 @@
 <jsp:include page="/static/head.jsp">
     <jsp:param name="title" value="recomendadas"/>
 </jsp:include>
-<jsp:useBean id="actualiza" scope="request" type="java.lang.String"/>
 
 <body>
 <div class='container'>
@@ -21,9 +20,7 @@
     </jsp:include>
     <div class="pb-5 pt-4 px-3 titlecolor">
         <div class="col-lg-6">
-            <% if (actualiza.equals("actualiza")) {%>
             <h1 class='text-light'>Lista de Canciones Recomendadas</h1>
-            <%}else{%>
         </div>
     </div>
     <div class="tabla">
@@ -34,9 +31,8 @@
             <th>BANDA</th>
             <th>Ver</th>
             </thead>
-            <%
-                for (Cancion recomendadas : listaRecomendadas) {
-            %>
+            <%  for (Cancion recomendadas : listaRecomendadas) {  %>
+            <tbody>
             <tr>
                 <td><%=recomendadas.getIdcancion()%>
                 </td>
@@ -44,13 +40,11 @@
                 </td>
                 <td><%=recomendadas.getBanda()%>
                 </td>
-                <td><a class="btn btn-success" href="<%=request.getContextPath()%>/listaCanciones" type=button>Más de la banda</a>
+                <td><a class="btn btn-success" href="<%=request.getContextPath()%>/listaCanciones?action=<%=recomendadas.getBanda()%>" type=button>Más de la banda</a>
                 </td>
             </tr>
-            <%
-                }
-            %>
-            <%}%>
+            <% } %>
+            </tbody>
         </table>
     </div>
 </div>
