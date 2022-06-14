@@ -11,6 +11,10 @@ public class Cancion {
         this.banda = banda;
     }
 
+    public Cancion() {
+
+    }
+
 
     public int getIdcancion() {
         return idcancion;
