@@ -12,6 +12,8 @@
 <jsp:include page="/static/head.jsp">
     <jsp:param name="title" value="recomendadas"/>
 </jsp:include>
+<jsp:useBean id="actualiza" scope="request" type="java.lang.String"/>
+
 <body>
 <div class='container'>
     <jsp:include page="/includes/navbar.jsp">
@@ -19,7 +21,9 @@
     </jsp:include>
     <div class="pb-5 pt-4 px-3 titlecolor">
         <div class="col-lg-6">
-            <h1 class='text-light'>Lista de recomendadas</h1>
+            <% if (actualiza.equals("actualiza")) {%>
+            <h1 class='text-light'>Lista de Canciones Recomendadas</h1>
+            <%}else{%>
         </div>
     </div>
     <div class="tabla">
