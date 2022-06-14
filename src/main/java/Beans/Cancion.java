@@ -5,7 +5,11 @@ public class Cancion {
     private String nombre_cancion;
     private Banda banda;
 
-
+    public Cancion(int idcancion, String nombre_cancion, Banda banda) {
+        this.idcancion = idcancion;
+        this.nombre_cancion = nombre_cancion;
+        this.banda = banda;
+    }
 
     public int getIdcancion() {
         return idcancion;
