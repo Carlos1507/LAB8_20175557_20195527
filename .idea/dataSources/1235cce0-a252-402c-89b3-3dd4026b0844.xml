@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dataSource name="lab6sw1@localhost">
-  <database-model serializer="dbm" dbms="MYSQL" family-id="MYSQL" format-version="4.38">
+  <database-model serializer="dbm" dbms="MYSQL" family-id="MYSQL" format-version="4.32">
     <root id="1">
       <DefaultCasing>lower/lower</DefaultCasing>
       <DefaultEngine>InnoDB</DefaultEngine>
@@ -945,373 +945,364 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
     <collation id="273" parent="1" name="utf8mb4_zh_0900_as_cs">
       <Charset>utf8mb4</Charset>
     </collation>
-    <schema id="274" parent="1" name="hr">
-      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    <schema id="274" parent="1" name="centro1">
+      <CollationName>utf8_general_ci</CollationName>
     </schema>
     <schema id="275" parent="1" name="information_schema">
       <CollationName>utf8_general_ci</CollationName>
     </schema>
-    <schema id="276" parent="1" name="lab6sw1">
+    <schema id="276" parent="1" name="lab5_20195527">
+      <CollationName>utf8_general_ci</CollationName>
+    </schema>
+    <schema id="277" parent="1" name="lab6sw1">
       <Current>1</Current>
       <CollationName>utf8_general_ci</CollationName>
     </schema>
-    <schema id="277" parent="1" name="mysql">
+    <schema id="278" parent="1" name="mysql">
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
-    </schema>
-    <schema id="278" parent="1" name="mysystem4">
-      <CollationName>utf8_general_ci</CollationName>
     </schema>
     <schema id="279" parent="1" name="performance_schema">
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </schema>
-    <schema id="280" parent="1" name="sakila">
-      <CollationName>utf8mb4_0900_ai_ci</CollationName>
-    </schema>
-    <schema id="281" parent="1" name="sys">
-      <CollationName>utf8mb4_0900_ai_ci</CollationName>
-    </schema>
-    <user id="282" parent="1" name="mysql.infoschema">
-      <CanLogin>0</CanLogin>
+    <user id="280" parent="1" name="mysql.infoschema">
       <Host>localhost</Host>
       <Plugin>caching_sha2_password</Plugin>
     </user>
-    <user id="283" parent="1" name="mysql.session">
-      <CanLogin>0</CanLogin>
+    <user id="281" parent="1" name="mysql.session">
       <Host>localhost</Host>
       <Plugin>caching_sha2_password</Plugin>
     </user>
-    <user id="284" parent="1" name="mysql.sys">
-      <CanLogin>0</CanLogin>
+    <user id="282" parent="1" name="mysql.sys">
       <Host>localhost</Host>
       <Plugin>caching_sha2_password</Plugin>
     </user>
-    <user id="285" parent="1" name="root">
+    <user id="283" parent="1" name="root">
       <Host>localhost</Host>
       <Plugin>caching_sha2_password</Plugin>
     </user>
-    <table id="286" parent="276" name="artista">
+    <table id="284" parent="277" name="artista">
       <Engine>InnoDB</Engine>
       <CollationName>utf8_general_ci</CollationName>
     </table>
-    <table id="287" parent="276" name="banda">
+    <table id="285" parent="277" name="banda">
       <Engine>InnoDB</Engine>
       <CollationName>utf8_general_ci</CollationName>
     </table>
-    <table id="288" parent="276" name="cancion">
+    <table id="286" parent="277" name="cancion">
       <Engine>InnoDB</Engine>
       <CollationName>utf8_general_ci</CollationName>
     </table>
-    <table id="289" parent="276" name="ciudad">
+    <table id="287" parent="277" name="ciudad">
       <Engine>InnoDB</Engine>
       <CollationName>utf8_general_ci</CollationName>
     </table>
-    <table id="290" parent="276" name="instrumento">
+    <table id="288" parent="277" name="instrumento">
       <Engine>InnoDB</Engine>
       <CollationName>utf8_general_ci</CollationName>
     </table>
-    <table id="291" parent="276" name="listas">
+    <table id="289" parent="277" name="listas">
       <Engine>InnoDB</Engine>
       <CollationName>utf8_general_ci</CollationName>
     </table>
-    <table id="292" parent="276" name="pais">
+    <table id="290" parent="277" name="pais">
       <Engine>InnoDB</Engine>
       <CollationName>utf8_general_ci</CollationName>
     </table>
-    <table id="293" parent="276" name="reproduccion">
+    <table id="291" parent="277" name="reproduccion">
       <Engine>InnoDB</Engine>
       <CollationName>utf8_general_ci</CollationName>
     </table>
-    <table id="294" parent="276" name="tour">
+    <table id="292" parent="277" name="tour">
       <Engine>InnoDB</Engine>
       <CollationName>utf8_general_ci</CollationName>
     </table>
-    <table id="295" parent="276" name="tours_por_ciudad">
+    <table id="293" parent="277" name="tours_por_ciudad">
       <Engine>InnoDB</Engine>
       <CollationName>utf8_general_ci</CollationName>
     </table>
-    <column id="296" parent="286" name="idartista">
-      <AutoIncrement>16</AutoIncrement>
+    <column id="294" parent="284" name="idartista">
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
+      <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="297" parent="286" name="nombre_artista">
+    <column id="295" parent="284" name="nombre_artista">
       <DataType>varchar(30)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="298" parent="286" name="instrumento">
+    <column id="296" parent="284" name="instrumento">
       <DataType>varchar(3)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
-    <column id="299" parent="286" name="banda">
+    <column id="297" parent="284" name="banda">
       <DataType>varchar(3)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>4</Position>
     </column>
-    <foreign-key id="300" parent="286" name="fk_artista_instrumento1">
+    <foreign-key id="298" parent="284" name="fk_artista_instrumento1">
       <ColNames>instrumento</ColNames>
       <RefColNames>idinstrumento</RefColNames>
       <RefTableName>instrumento</RefTableName>
     </foreign-key>
-    <foreign-key id="301" parent="286" name="fk_artista_banda1">
+    <foreign-key id="299" parent="284" name="fk_artista_banda1">
       <ColNames>banda</ColNames>
       <RefColNames>idbanda</RefColNames>
       <RefTableName>banda</RefTableName>
     </foreign-key>
-    <index id="302" parent="286" name="fk_artista_instrumento1_idx">
+    <index id="300" parent="284" name="fk_artista_instrumento1_idx">
       <ColNames>instrumento</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="303" parent="286" name="fk_artista_banda1_idx">
+    <index id="301" parent="284" name="fk_artista_banda1_idx">
       <ColNames>banda</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="304" parent="286" name="PRIMARY">
+    <key id="302" parent="284" name="PRIMARY">
       <ColNames>idartista</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
     </key>
-    <column id="305" parent="287" name="idbanda">
+    <column id="303" parent="285" name="idbanda">
       <DataType>varchar(3)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="306" parent="287" name="nombre_banda">
+    <column id="304" parent="285" name="nombre_banda">
       <DataType>varchar(30)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="307" parent="287" name="artista_lider">
+    <column id="305" parent="285" name="artista_lider">
       <DataType>int|0s</DataType>
       <Position>3</Position>
     </column>
-    <foreign-key id="308" parent="287" name="fk_banda_artista1">
+    <foreign-key id="306" parent="285" name="fk_banda_artista1">
       <ColNames>artista_lider</ColNames>
       <RefColNames>idartista</RefColNames>
       <RefTableName>artista</RefTableName>
     </foreign-key>
-    <index id="309" parent="287" name="fk_banda_artista1_idx">
+    <index id="307" parent="285" name="fk_banda_artista1_idx">
       <ColNames>artista_lider</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="310" parent="287" name="PRIMARY">
+    <key id="308" parent="285" name="PRIMARY">
       <ColNames>idbanda</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
     </key>
-    <column id="311" parent="288" name="idcancion">
-      <AutoIncrement>66</AutoIncrement>
+    <column id="309" parent="286" name="idcancion">
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
+      <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="312" parent="288" name="nombre_cancion">
+    <column id="310" parent="286" name="nombre_cancion">
       <DataType>varchar(40)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="313" parent="288" name="banda">
+    <column id="311" parent="286" name="banda">
       <DataType>varchar(3)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
-    <column id="314" parent="288" name="Listas_idListas">
+    <column id="312" parent="286" name="Listas_idListas">
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
       <Position>4</Position>
     </column>
-    <foreign-key id="315" parent="288" name="fk_cancion_banda1">
+    <foreign-key id="313" parent="286" name="fk_cancion_banda1">
       <ColNames>banda</ColNames>
       <RefColNames>idbanda</RefColNames>
       <RefTableName>banda</RefTableName>
     </foreign-key>
-    <foreign-key id="316" parent="288" name="fk_cancion_Listas1">
+    <foreign-key id="314" parent="286" name="fk_cancion_Listas1">
       <ColNames>Listas_idListas</ColNames>
       <RefColNames>idListas</RefColNames>
       <RefTableName>listas</RefTableName>
     </foreign-key>
-    <index id="317" parent="288" name="fk_cancion_banda1_idx">
+    <index id="315" parent="286" name="fk_cancion_banda1_idx">
       <ColNames>banda</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="318" parent="288" name="fk_cancion_Listas1_idx">
+    <index id="316" parent="286" name="fk_cancion_Listas1_idx">
       <ColNames>Listas_idListas</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="319" parent="288" name="PRIMARY">
+    <key id="317" parent="286" name="PRIMARY">
       <ColNames>idcancion</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
     </key>
-    <column id="320" parent="289" name="idciudad">
+    <column id="318" parent="287" name="idciudad">
       <DataType>varchar(3)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="321" parent="289" name="nombre_ciudad">
+    <column id="319" parent="287" name="nombre_ciudad">
       <DataType>varchar(20)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="322" parent="289" name="pais">
+    <column id="320" parent="287" name="pais">
       <DataType>varchar(3)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
-    <foreign-key id="323" parent="289" name="fk_ciudad_pais1">
+    <foreign-key id="321" parent="287" name="fk_ciudad_pais1">
       <ColNames>pais</ColNames>
       <RefColNames>idpais</RefColNames>
       <RefTableName>pais</RefTableName>
     </foreign-key>
-    <index id="324" parent="289" name="fk_ciudad_pais1_idx">
+    <index id="322" parent="287" name="fk_ciudad_pais1_idx">
       <ColNames>pais</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="325" parent="289" name="PRIMARY">
+    <key id="323" parent="287" name="PRIMARY">
       <ColNames>idciudad</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
     </key>
-    <column id="326" parent="290" name="idinstrumento">
+    <column id="324" parent="288" name="idinstrumento">
       <DataType>varchar(3)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="327" parent="290" name="nombre_inst">
+    <column id="325" parent="288" name="nombre_inst">
       <DataType>varchar(20)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <key id="328" parent="290" name="PRIMARY">
+    <key id="326" parent="288" name="PRIMARY">
       <ColNames>idinstrumento</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
     </key>
-    <column id="329" parent="291" name="idListas">
-      <AutoIncrement>2</AutoIncrement>
+    <column id="327" parent="289" name="idListas">
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
+      <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="330" parent="291" name="nombre_Lista">
+    <column id="328" parent="289" name="nombre_Lista">
       <DataType>varchar(45)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <key id="331" parent="291" name="PRIMARY">
+    <key id="329" parent="289" name="PRIMARY">
       <ColNames>idListas</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
     </key>
-    <column id="332" parent="292" name="idpais">
+    <column id="330" parent="290" name="idpais">
       <DataType>varchar(3)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="333" parent="292" name="nombre_pais">
+    <column id="331" parent="290" name="nombre_pais">
       <DataType>varchar(20)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <key id="334" parent="292" name="PRIMARY">
+    <key id="332" parent="290" name="PRIMARY">
       <ColNames>idpais</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
     </key>
-    <column id="335" parent="293" name="idreproduccion">
+    <column id="333" parent="291" name="idreproduccion">
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="336" parent="293" name="fecha">
+    <column id="334" parent="291" name="fecha">
       <DataType>date|0s</DataType>
       <Position>2</Position>
     </column>
-    <column id="337" parent="293" name="cancion_idcancion">
+    <column id="335" parent="291" name="cancion_idcancion">
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
-    <foreign-key id="338" parent="293" name="fk_reproduccion_cancion1">
+    <foreign-key id="336" parent="291" name="fk_reproduccion_cancion1">
       <ColNames>cancion_idcancion</ColNames>
       <RefColNames>idcancion</RefColNames>
       <RefTableName>cancion</RefTableName>
     </foreign-key>
-    <index id="339" parent="293" name="fk_reproduccion_cancion1_idx">
+    <index id="337" parent="291" name="fk_reproduccion_cancion1_idx">
       <ColNames>cancion_idcancion</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="340" parent="293" name="PRIMARY">
+    <key id="338" parent="291" name="PRIMARY">
       <ColNames>idreproduccion</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
     </key>
-    <column id="341" parent="294" name="idtour">
-      <AutoIncrement>3</AutoIncrement>
+    <column id="339" parent="292" name="idtour">
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
+      <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="342" parent="294" name="nombre_tour">
+    <column id="340" parent="292" name="nombre_tour">
       <DataType>varchar(30)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="343" parent="294" name="banda">
+    <column id="341" parent="292" name="banda">
       <DataType>varchar(3)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
-    <foreign-key id="344" parent="294" name="fk_tour_banda1">
+    <foreign-key id="342" parent="292" name="fk_tour_banda1">
       <ColNames>banda</ColNames>
       <RefColNames>idbanda</RefColNames>
       <RefTableName>banda</RefTableName>
     </foreign-key>
-    <index id="345" parent="294" name="fk_tour_banda1_idx">
+    <index id="343" parent="292" name="fk_tour_banda1_idx">
       <ColNames>banda</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="346" parent="294" name="PRIMARY">
+    <key id="344" parent="292" name="PRIMARY">
       <ColNames>idtour</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
     </key>
-    <column id="347" parent="295" name="tour">
+    <column id="345" parent="293" name="tour">
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="348" parent="295" name="ciudad">
+    <column id="346" parent="293" name="ciudad">
       <DataType>varchar(3)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="349" parent="295" name="fecha">
+    <column id="347" parent="293" name="fecha">
       <DataType>date|0s</DataType>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
-    <foreign-key id="350" parent="295" name="fk_tour_has_ciudad_tour1">
+    <foreign-key id="348" parent="293" name="fk_tour_has_ciudad_tour1">
       <ColNames>tour</ColNames>
       <RefColNames>idtour</RefColNames>
       <RefTableName>tour</RefTableName>
     </foreign-key>
-    <foreign-key id="351" parent="295" name="fk_tour_has_ciudad_ciudad1">
+    <foreign-key id="349" parent="293" name="fk_tour_has_ciudad_ciudad1">
       <ColNames>ciudad</ColNames>
       <RefColNames>idciudad</RefColNames>
       <RefTableName>ciudad</RefTableName>
     </foreign-key>
-    <index id="352" parent="295" name="fk_tour_has_ciudad_tour1_idx">
+    <index id="350" parent="293" name="fk_tour_has_ciudad_tour1_idx">
       <ColNames>tour</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="353" parent="295" name="fk_tour_has_ciudad_ciudad1_idx">
+    <index id="351" parent="293" name="fk_tour_has_ciudad_ciudad1_idx">
       <ColNames>ciudad</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="354" parent="295" name="PRIMARY">
+    <key id="352" parent="293" name="PRIMARY">
       <ColNames>tour
 ciudad</ColNames>
       <NameSurrogate>1</NameSurrogate>

@@ -25,7 +25,7 @@ public class CancionesDao {
              PreparedStatement preparedStatement = connection.prepareStatement(sql);) {
             try(ResultSet rs = preparedStatement.executeQuery();){
                 while (rs.next()) {
-                    Cancion cancion = new Cancion(rs.getInt(1), rs.getString(2), rs.getString(3));
+                    Cancion cancion = new Cancion(rs.getInt(1), rs.getString(2), rs.getString(3), rs.getInt(4));
                     listaCanciones.add(cancion);
                 }
             }
@@ -48,7 +48,7 @@ public class CancionesDao {
             preparedStatement.setString(1,idBanda);
             try(ResultSet rs = preparedStatement.executeQuery();){
                 while (rs.next()) {
-                    Cancion cancion = new Cancion(rs.getInt(1), rs.getString(2), rs.getString(3));
+                    Cancion cancion = new Cancion(rs.getInt(1), rs.getString(2), rs.getString(3), rs.getInt(4));
                     listaCanciones.add(cancion);
                 }
             }

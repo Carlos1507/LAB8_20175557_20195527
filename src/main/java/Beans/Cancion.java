@@ -4,11 +4,18 @@ public class Cancion {
     private int idcancion;
     private String nombre_cancion;
     private String banda;
+    private int Listas_idListas;
 
     public Cancion(int idcancion, String nombre_cancion, String banda) {
         this.idcancion = idcancion;
         this.nombre_cancion = nombre_cancion;
         this.banda = banda;
+    }
+    public Cancion(int idcancion, String nombre_cancion, String banda, int idLista) {
+        this.idcancion = idcancion;
+        this.nombre_cancion = nombre_cancion;
+        this.banda = banda;
+        this.Listas_idListas = idLista;
     }
 
     public int getIdcancion() {
@@ -33,5 +40,13 @@ public class Cancion {
 
     public void setBanda(String banda) {
         this.banda = banda;
+    }
+
+    public int getListas_idListas() {
+        return Listas_idListas;
+    }
+
+    public void setListas_idListas(int listas_idListas) {
+        Listas_idListas = listas_idListas;
     }
 }
